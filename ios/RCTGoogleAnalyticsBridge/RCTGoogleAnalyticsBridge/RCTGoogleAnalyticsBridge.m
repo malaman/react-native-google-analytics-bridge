@@ -17,7 +17,7 @@ NSString *staticTrackerId;
 - (instancetype)init
 {
     if ((self = [super init])) {
-        [GAI sharedInstance].trackUncaughtExceptions = YES;
+        [[GAI sharedInstance] setTrackUncaughtExceptions:NO];
         [GAI sharedInstance].dispatchInterval = 20;
 
         staticTrackerId = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"GAITrackingId"];
